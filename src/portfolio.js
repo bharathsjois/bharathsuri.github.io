@@ -1,36 +1,25 @@
-/* Change this file to get your personal Portfolio */
-
-// To change portfolio colors globally go to the  _globalColor.scss file
-
 import emoji from "react-easy-emoji";
-import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
-
-// Splash Screen
+import splashAnimation from "./assets/lottie/splashAnimation";
 
 const splashScreen = {
-  enabled: true, // set false to disable splash screen
+  enabled: true,
   animation: splashAnimation,
-  duration: 2000 // Set animation duration as per your animation
+  duration: 2000,
 };
 
-// Summary And Greeting Section
-
 const illustration = {
-  animated: true // Set to false to use static SVG
+  animated: true,
 };
 
 const greeting = {
   username: "Bharath Suri",
-  title: "Trying to navigate...",
+  title: "Hi, I'm Bharath 👋",
   subTitle: emoji(
-    "Engineer | Problem Solver | Embedded Systems | C++ Craftsman"
+    "Engineer | Problem Solver | Embedded Systems | C++ Craftsman | Curious Learner"
   ),
-  resumeLink:
-    "", // Set to empty to hide the button
-  displayGreeting: true // Set false to hide this section, defaults to true
+  resumeLink: "", // Add resume URL if ready
+  displayGreeting: true,
 };
-
-// Social Media Links
 
 const socialMediaLinks = {
   github: "https://github.com/bharathsjois",
@@ -39,13 +28,10 @@ const socialMediaLinks = {
   gitlab: "",
   facebook: "",
   medium: "",
-  stackoverflow: ""
-  // Instagram, Twitter and Kaggle are also supported in the links!
-  // To customize icons and social links, tweak src/components/SocialMedia
-  display: true // Set true to display this section, defaults to false
+  stackoverflow: "",
+  display: true,
 };
 
-// Skills Section
 const skills = {
   data: [
     {
@@ -53,7 +39,7 @@ const skills = {
       skills: [
         "⚡ 17+ years in C/C++, Telematics, Embedded Linux, RTOS",
         "⚡ Built developer tools and optimized automotive stacks",
-        "⚡ Now exploring GenAI and algo-assisted stock trading",
+        "⚡ Exploring GenAI and algo-assisted stock trading",
       ],
       softwareSkills: [
         { skillName: "C++", fontAwesomeClassname: "logos:c-plusplus" },
@@ -65,257 +51,148 @@ const skills = {
   ],
 };
 
-// Education Section
-
 const educationInfo = {
-  display: true, // Set false to hide this section, defaults to true
+  display: true,
   schools: [
     {
-      schoolName: "Linkoping University, Linkoping, Sweden",
+      schoolName: "Linköping University, Sweden",
       logo: require("./assets/images/liuLogo.png"),
       subHeader: "Master of Science in Computer Systems",
       duration: "2009 - 2011",
-      desc: "Accelerating Knapsack problems using GPUs",
+      desc: "Accelerated Knapsack problems using GPUs",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
+        "Published work in VLSI & DATE conferences",
+        "Specialized in Embedded Systems & Computer Architecture",
+      ],
     },
     {
-      schoolName: "Stanford University",
-      logo: require("./assets/images/stanfordLogo.png"),
-      subHeader: "Bachelor of Science in Computer Science",
-      duration: "September 2013 - April 2017",
-      desc: "ECTS-B, with more than 160 credits in the area of Embedded systems and Computer Science",
-      descBullets: ["Accelerating the Knapsack Problem on GPUs, Linköping University (2011), Customizing Instruction Set Extensible Reconfigurable Processors Using GPUs, VLSI Conference (2012), A Scalable GPU-Based Approach to Accelerate the Multiple-Choice Knapsack Problem, DATE (2012)"]
-    }
-  ]
+      schoolName: "B.E. in Electronics and Communication",
+      logo: require("./assets/images/stanfordLogo.png"), // Replace with your undergrad logo if available
+      subHeader: "VTU, India",
+      duration: "2003 - 2007",
+      desc: "Strong fundamentals in electronics, digital systems and microcontrollers",
+    },
+  ],
 };
-
-// Work experience section
 
 const workExperiences = {
-  display: false, //Set it to true to show workExperiences Section
+  display: true,
   experience: [
     {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
+      role: "Engineering Lead - Embedded Systems",
+      company: "Bosch",
+      companylogo: require("./assets/images/facebookLogo.png"), // Replace with Bosch logo if you have
+      date: "2013 – Present",
+      desc: "Leading embedded software teams in telematics and automotive safety domains. Expert in developer enablement and productivity tools.",
     },
     {
-      role: "Front-End Developer",
-      company: "Quora",
+      role: "Embedded Software Engineer",
+      company: "Startup (Confidential)",
       companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      date: "2011 – 2013",
+      desc: "Worked on innovative automotive firmware stacks and rapid prototyping for Tier 1s.",
     },
-    {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    }
-  ]
+  ],
 };
-
-/* Your Open Source Section to View Your Github Pinned Projects
-To know how to get github key look at readme.md */
 
 const openSource = {
-  showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
-  display: true // Set false to hide this section, defaults to true
+  showGithubProfile: true,
+  display: true,
 };
-
-// Some big projects you have worked on
 
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  title: "Highlighted Projects",
+  subtitle: "Some personal and open-source efforts",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/nextuLogo.webp"),
+      projectName: "Breeze API Client",
+      projectDesc: "Automates insights for trading using Breeze API. Features token validation, position tracking, and email alerts.",
       footerLink: [
         {
-          name: "Visit Website",
-          url: "http://saayahealth.com/"
-        }
-        //  you can add extra buttons here.
-      ]
+          name: "View on GitHub",
+          url: "https://github.com/bharathsjois/breeze-api-client",
+        },
+      ],
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/saayaHealthLogo.webp"),
+      projectName: "Gmail Utility",
+      projectDesc: "Simple OAuth + SMTP fallback utility for sending automated emails with Gmail credentials securely.",
       footerLink: [
         {
-          name: "Visit Website",
-          url: "http://nextu.se/"
-        }
-      ]
-    }
+          name: "View on GitHub",
+          url: "https://github.com/bharathsjois/gmail-utility",
+        },
+      ],
+    },
   ],
-  display: false // Set false to hide this section, defaults to true
+  display: true,
 };
-
-// Achievement Section
-// Include certificates, talks etc
 
 const achievementSection = {
-  title: emoji("Achievements And Certifications 🏆 "),
-  subtitle:
-    "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
-
+  title: emoji("Certifications & Highlights 🏆"),
+  subtitle: "Courses, contributions, and side projects worth a mention",
   achievementsCards: [
     {
-      title: "Google Code-In Finalist",
-      subtitle:
-        "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
+      title: "DevFolio Setup",
+      subtitle: "Custom GitHub Pages portfolio with CI/CD, custom DNS, and theme optimization.",
       image: require("./assets/images/codeInLogo.webp"),
-      imageAlt: "Google Code-In Logo",
-      footerLink: [
-        {
-          name: "Certification",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
-        },
-        {
-          name: "Award Letter",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
-        },
-        {
-          name: "Google Code-in Blog",
-          url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
-        }
-      ]
+      imageAlt: "GitHub Logo",
     },
-    {
-      title: "Google Assistant Action",
-      subtitle:
-        "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
-      image: require("./assets/images/googleAssistantLogo.webp"),
-      imageAlt: "Google Assistant Action Logo",
-      footerLink: [
-        {
-          name: "View Google Assistant Action",
-          url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
-        }
-      ]
-    },
-
-    {
-      title: "PWA Web App Developer",
-      subtitle: "Completed Certifcation from SMIT for PWA Web App Development",
-      image: require("./assets/images/pwaLogo.webp"),
-      imageAlt: "PWA Logo",
-      footerLink: [
-        {name: "Certification", url: ""},
-        {
-          name: "Final Project",
-          url: "https://pakistan-olx-1.firebaseapp.com/"
-        }
-      ]
-    }
   ],
-  display: false // Set false to hide this section, defaults to true
+  display: true,
 };
-
-// Blogs Section
 
 const blogSection = {
   title: "Blogs",
   subtitle:
-    "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
-  displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
-  blogs: [
-    {
-      url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
-      title: "Win a Google Assistant Tshirt and $200 in Google Cloud Credits",
-      description:
-        "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?"
-    },
-    {
-      url: "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
-      title: "Why REACT is The Best?",
-      description:
-        "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
-    }
-  ],
-  display: false // Set false to hide this section, defaults to true
+    "Writings about embedded systems, stock trading and productivity soon.",
+  displayMediumBlogs: false,
+  blogs: [],
+  display: false,
 };
-
-// Talks Sections
 
 const talkSection = {
   title: "TALKS",
-  subtitle: emoji(
-    "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
-  ),
-
-  talks: [
-    {
-      title: "Build Actions For Google Assistant",
-      subtitle: "Codelab at GDG DevFest Karachi 2019",
-      slides_url: "https://bit.ly/saadpasta-slides",
-      event_url: "https://www.facebook.com/events/2339906106275053/"
-    }
-  ],
-  display: false // Set false to hide this section, defaults to true
+  subtitle: "Maybe coming soon... 😅",
+  talks: [],
+  display: false,
 };
-
-// Podcast Section
 
 const podcastSection = {
   title: emoji("Podcast 🎙️"),
-  subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
-
-  // Please Provide with Your Podcast embeded Link
-  podcast: [
-    "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
-  ],
-  display: false // Set false to hide this section, defaults to true
+  subtitle: "Maybe someday...",
+  podcast: [],
+  display: false,
 };
 
-// Resume Section
 const resumeSection = {
   title: "Resume",
   subtitle: "Feel free to download my resume",
-
-  // Please Provide with Your Podcast embeded Link
-  display: false // Set false to hide this section, defaults to true
+  display: false,
 };
 
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
-  subtitle:
-    "Discuss a project or just want to say hi? My Inbox is open for all.",
-  email_address: "saadpasta70@gmail.com"
+  subtitle: "Let's connect — professional networking or collaboration ideas welcome.",
+  email_address: "bharath.s.jois@gmail.com",
 };
-
-// Twitter Section
 
 const twitterDetails = {
-  userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: false // Set true to display this section, defaults to false
+  userName: "",
+  display: false,
 };
 
-const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const isHireable = false;
 
 export {
   illustration,
   greeting,
   socialMediaLinks,
   splashScreen,
-  skillsSection,
+  skills,
   educationInfo,
-  techStack,
   workExperiences,
   openSource,
   bigProjects,
@@ -326,5 +203,5 @@ export {
   contactInfo,
   twitterDetails,
   isHireable,
-  resumeSection
+  resumeSection,
 };
